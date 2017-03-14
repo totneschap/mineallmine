@@ -58,12 +58,14 @@ body {
 	}
 	.page-main-info {
 		width: 80%;
-		display: block;
-		margin: 100px auto;
+		display: inline-block;
+		margin: 8rem auto;
+		padding: 0 10%;
 		h2 {
 			@include h1;
 			text-transform: uppercase;
 			color: #565656;
+			margin: 0 0 2rem 0;
 			&:before {
 				content: '';
 				background: #565656;
@@ -73,8 +75,44 @@ body {
 				margin-bottom: 40px;
 			}
 		}
+		h3 {
+			@include h1;
+			text-transform: uppercase;
+			color: #565656;
+			margin: 0 0 2rem 0;
+			text-align: center;
+			&:before {
+				content: '';
+				background: #565656;
+				height: 5px;
+				width: 30px;
+				display: block;
+				margin: 0 auto 40px auto;
+			}
+		}
 		p {
 			text-align: left;
+		}
+		.work-area {
+			.work-row {
+				.caption {
+					& > h2.project-title {
+						@include h1;
+						text-transform: uppercase;
+						color: #565656;
+						margin: 0 0 2rem 0;
+						text-align: center;
+						&:before {
+							content: '';
+							background: none;
+							height: 0;
+							width: 0;
+							display: block;
+							margin: 0;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -249,7 +287,7 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	.work-row {
-		width: 80%;
+		width: 100%;
 		display: block;
 		margin: 0 auto 50px auto;
 		&:before {
@@ -260,6 +298,18 @@ body {
 			content: '';
 			display: table;
 			clear: both;
+		}
+		.caption {
+			& > h2 {
+				@include h1;
+				text-transform: uppercase;
+				color: #565656;
+				margin: 0 0 2rem 0;
+				text-align: center;
+				&:before {
+					content: '';
+				}
+			}
 		}
 		.col-img-main, .col-img-half {
 			@include col-img-main;
