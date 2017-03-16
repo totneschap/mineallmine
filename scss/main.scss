@@ -11,6 +11,7 @@
 @import "components/buttons";
 @import "components/navigation";
 @import "components/sections";
+@import "var";
 
 // projects
 
@@ -18,6 +19,9 @@
 
 body {
 	margin: 0;
+}
+p {
+	@include p ;
 }
 #home-sweet-home {
 	height: 100%;
@@ -44,7 +48,7 @@ body {
 				color: #fff;
 				&:before {
 					content: '';
-					background: #fff;
+					background: #E66A75;
 					height: 5px;
 					width: 30px;
 					display: block;
@@ -64,11 +68,11 @@ body {
 		h2 {
 			@include h1;
 			text-transform: uppercase;
-			color: #565656;
+			color: $main_colour;
 			margin: 0 0 2rem 0;
 			&:before {
 				content: '';
-				background: #565656;
+				background: $accent_colour;
 				height: 5px;
 				width: 30px;
 				display: block;
@@ -78,12 +82,12 @@ body {
 		h3 {
 			@include h1;
 			text-transform: uppercase;
-			color: #565656;
+			color: $main_colour;
 			margin: 0 0 2rem 0;
 			text-align: center;
 			&:before {
 				content: '';
-				background: #565656;
+				background: $accent_colour;
 				height: 5px;
 				width: 30px;
 				display: block;
@@ -99,7 +103,7 @@ body {
 					& > h2.project-title {
 						@include h1;
 						text-transform: uppercase;
-						color: #565656;
+						color: $main_colour;
 						margin: 0 0 2rem 0;
 						text-align: center;
 						&:before {
@@ -199,7 +203,7 @@ body {
   color: #fff;
 }
 .flip.scrolling {
-  color: #000;
+  color: $main_colour;
   transition: 0.5s;
 }
 .scrolling {
@@ -303,7 +307,7 @@ body {
 			& > h2 {
 				@include h1;
 				text-transform: uppercase;
-				color: #565656;
+				color: $main_colour;
 				margin: 0 0 2rem 0;
 				text-align: center;
 				&:before {
@@ -432,14 +436,14 @@ body {
   &.on {
     .one {
       transform: (rotate(45deg) translate(7px, 7px));
-			background: #FBD664;
+			background: $accent_colour;
     }
     .two {
       opacity: 0;
     }
     .three {
       transform: (rotate(-45deg) translate(8px, -10px));
-			background: #FBD664;
+			background: $accent_colour;
     }
   }
 }
@@ -452,6 +456,7 @@ body {
   margin: 9px auto;
   backface-visibility: hidden;
   transition: 0.3s;
+	background: #fff;
 }
 
 nav {
@@ -476,18 +481,20 @@ nav {
 	    width: 100%;
 	    display: block;
 	      &:hover {
-	        background-color: rgba(0,0,0,0.5);
+	        color: $accent_colour;
 	      }
 	    }
 	}
 }
-
+.active {
+	color: $accent_colour;
+}
 .menu-section {
   &.on {
   width: 100%;
   height: 100%;
   display: block;
-  background-color: rgba(58,58,64,1);
+  background-color: #3D414C;
 	position: fixed;
   top: 0px;
   left: 0px;

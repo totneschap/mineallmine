@@ -1,26 +1,25 @@
 @mixin h1 {
   font-family: 'Oswald', sans-serif;
-  color: #565656;
   font-weight: 400;
   font-size: 32px;
+  letter-spacing: 1px;
 }
 @mixin h2 {
-  font-family: 'Lusitana', serif;
+  font-family: 'Droid Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   text-decoration: none;
   letter-spacing: 1px;
 }
 @mixin nav-bar-fonts {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   font-weight: 300;
   text-decoration: none;
   letter-spacing: 2px;
 }
 @mixin p {
-  font-family: 'Lusitana', serif;
-  text-transform: uppercase;
-  font-weight: 300;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 400;
   text-decoration: none;
   letter-spacing: 1px;
 }
