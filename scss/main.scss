@@ -63,7 +63,7 @@ p {
 	.page-main-info {
 		width: 80%;
 		display: inline-block;
-		margin: 8rem auto;
+		margin: 8rem auto 0 auto;
 		padding: 0 10%;
 		h2 {
 			@include h1;
@@ -118,6 +118,67 @@ p {
 				}
 			}
 		}
+		.view-more {
+			position: relative;
+			a {
+				margin: 0 auto;
+				position: relative;
+				display: inline-block;
+				color: $main_colour;
+				left: 50%;
+				margin-left: -51px;
+				text-decoration: none;
+				p {
+					text-decoration: none;
+					&:after {
+						content: " ";
+						position: absolute;
+						height: 2px;
+						background: $accent_colour;
+						width: 100%;
+						bottom: 0;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+	.social-panel {
+		height: 100%;
+		width: calc(100% / 10);
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		opacity: 1;
+		.social-wrap {
+			position: absolute;
+			transform: translateX(-50%);
+			left: 50%;
+			top: calc(50% - 15rem);
+			width: 6rem;
+			.social {
+				transform: rotate(90deg) translateX(50%);
+				display: inline-block;
+				position: absolute;
+				width: 32rem;
+				right: -13rem;
+				padding: 0;
+				margin: 0;
+				li {
+					float: left;
+					list-style-type: none;
+					text-transform: lowercase;
+					padding: 0 30px;
+					a {
+						text-decoration: none;
+						@include nav-bar-fonts;
+						font-size: 14px;
+						text-transform: lowercase;
+					}
+				}
+			}
+		}
 	}
 }
 .main-title-bar {
@@ -160,43 +221,6 @@ p {
 		position: absolute;
 		width: 10rem;
 		right: -2.5rem;
-	}
-}
-.social-panel {
-	height: 100%;
-	width: calc(100% / 10);
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 10;
-	opacity: 1;
-	.social-wrap {
-		position: absolute;
-		transform: translateX(-50%);
-		left: 50%;
-		top: calc(50% - 15rem);
-		width: 6rem;
-		.social {
-			transform: rotate(90deg) translateX(50%);
-			display: inline-block;
-			position: absolute;
-			width: 32rem;
-			right: -13rem;
-			padding: 0;
-			margin: 0;
-			li {
-				float: left;
-				list-style-type: none;
-				text-transform: lowercase;
-				padding: 0 30px;
-				a {
-					text-decoration: none;
-					@include nav-bar-fonts;
-					font-size: 14px;
-					text-transform: lowercase;
-				}
-			}
-		}
 	}
 }
 .flip {
@@ -420,11 +444,6 @@ p {
   opacity: 0.9;
 }
 
-
-
-
-
-
 .menu-toggle {
   width: 40px;
   height: 35px;
@@ -447,7 +466,6 @@ p {
     }
   }
 }
-
 .one,
 .two,
 .three{
@@ -458,10 +476,9 @@ p {
   transition: 0.3s;
 	background: #fff;
 }
-
 nav {
 	position: absolute;
-	top: 25%;
+	top: 10%;
 	width: 100%;
 	ul {
 	  margin: 0;
@@ -472,22 +489,40 @@ nav {
 	  &.hidden {
 	    display: none;
 	  }
-	    a {
-	    transition: 0.5s;
-	    text-decoration: none;
-	    color: white;
-	    font-size: 3em;
-	    line-height: 1.5;
-	    width: 100%;
-	    display: block;
-	      &:hover {
-	        color: $accent_colour;
-	      }
-	    }
+		.huge {
+			a {
+				@include h1;
+		    transition: 0.5s;
+		    text-decoration: none;
+		    color: white;
+		    font-size: 3em;
+		    line-height: 1.5;
+		    width: 100%;
+		    display: block;
+		    &:hover {
+		      color: $accent_colour;
+		    }
+		  }
+		}
+		.small {
+			a {
+				@include h1;
+		    transition: 0.5s;
+		    text-decoration: none;
+		    color: white;
+		    font-size: 1em;
+		    line-height: 1.5;
+		    width: 100%;
+		    display: block;
+		    &:hover {
+		      color: $accent_colour;
+		    }
+		  }
+		}
 	}
 }
 .active {
-	color: $accent_colour;
+	color: $accent_colour!important;
 }
 .menu-section {
   &.on {
@@ -503,4 +538,44 @@ nav {
 	z-index: 15;
 	overflow: hidden;
   }
+}
+#not-home-sweet-home {
+	.social-panel {
+		height: 100%;
+		width: calc(100% / 10);
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		opacity: 1;
+		.social-wrap {
+			position: absolute;
+			transform: translateX(-50%);
+			left: 50%;
+			top: calc(50% - 15rem);
+			width: 6rem;
+			.social {
+				transform: rotate(90deg) translateX(50%);
+				display: inline-block;
+				position: absolute;
+				width: 32rem;
+				right: -13rem;
+				padding: 0;
+				margin: 0;
+				li {
+					float: left;
+					list-style-type: none;
+					text-transform: lowercase;
+					padding: 0 30px;
+					a {
+						text-decoration: none;
+						@include nav-bar-fonts;
+						font-size: 14px;
+						text-transform: lowercase;
+						color: $main_colour;
+					}
+				}
+			}
+		}
+	}
 }
