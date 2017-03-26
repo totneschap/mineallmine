@@ -578,4 +578,19 @@ nav {
 			}
 		}
 	}
+	h3 {
+		@include h1;
+		text-transform: uppercase;
+		color: $main_colour;
+		margin: 0 0 2rem 0;
+		text-align: center;
+		&:before {
+			content: '';
+			background: $accent_colour;
+			height: 5px;
+			width: 30px;
+			display: block;
+			margin: 0 auto 40px auto;
+		}
+	}
 }
