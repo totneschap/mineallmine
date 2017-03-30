@@ -365,18 +365,18 @@ p {
 		}
 		.col-img-half {
 			@include col-img-half;
-			width: 47%;
+			width: 48%;
 			.gallery-image {
 				width: 100%;
 			}
 		}
-		.left {
-			margin-right: 3%;
-		}
-		.right {
-			margin-left: 3%;
-		}
 	}
+}
+.left {
+	margin-right: 2%;
+}
+.right {
+	margin-left: 2%;
 }
 
 
