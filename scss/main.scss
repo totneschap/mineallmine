@@ -97,6 +97,20 @@ p {
 		p {
 			text-align: left;
 		}
+		.software {
+			display: inline-block;
+			padding: 0;
+			li {
+				width: 50%;
+				float: left;
+				list-style: none;
+				img {
+					width: 50%;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
 		.work-area {
 			.work-row {
 				.caption {
@@ -151,6 +165,9 @@ p {
 		right: 0;
 		z-index: 10;
 		opacity: 1;
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 		.social-wrap {
 			position: absolute;
 			transform: translateX(-50%);
@@ -189,6 +206,9 @@ p {
 	left: 0;
 	z-index: 10;
 	opacity: 1;
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 	.main-title {
 		position: absolute;
 		top: calc(50%);
@@ -453,6 +473,9 @@ p {
   right: 3.5%;
   cursor: pointer;
 	z-index: 15;
+	@media screen and (max-width: 767px) {
+		top: 0;
+	}
   &.on {
     .one {
       transform: (rotate(45deg) translate(7px, 7px));
@@ -549,6 +572,9 @@ nav {
 		right: 0;
 		z-index: 10;
 		opacity: 1;
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 		.social-wrap {
 			position: absolute;
 			transform: translateX(-50%);
