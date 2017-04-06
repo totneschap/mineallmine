@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:image" content="http://www.greysaga.com/img/share_img/work.jpg" />
-        <meta property="og:description" content="Portfolio of Grey Ooi, a hybrid Web Designer from Malaysia" />
-        <meta name="description" content="Portfolio of Grey Ooi, a hybrid Web Designer from Malaysia" />
+        <meta property="og:description" content="Portfolio of Shane Whittaker" />
+        <meta name="description" content="Portfolio of Shane Whittaker" />
         <link href="css/main.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
@@ -15,16 +15,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <script src="js/functions.js" type="text/javascript"></script>
+        <script>
+          $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+          });
+        </script>
     </head>
     <body id="home-sweet-home">
-        <div class="main-title-bar">
-          <div class="mobile_menu">
-            <span class="lnr lnr-menu"></span>
-          </div>
-          <div class="main-title">
-            <a href="index.html" class="title flip">Shane Whittaker</a>
-          </div>
-        </div>
+      <div id="header"></div>
 
         <div class="menu-section">
           <div class="menu-toggle flip">
@@ -55,16 +54,6 @@
 
 
         <div class="hero-main">
-          <div class="social-panel custom">
-            <div class="social-wrap">
-              <ul class="social">
-                <li><a href="" class="facebook-social flip">Facebook</a></li>
-                <li><a href="" class="twitter-social flip">Twitter</a></li>
-                <li><a href="" class="dribbble-social flip">Dribbble</a></li>
-                <li><a href="" class="behance-social flip">Behance</a></li>
-              </ul>
-            </div>
-          </div>
           <div class="home-section-title">
             <h1>Hi, I'm Shane Whittaker<br> a freelance web designer.</h1>
             <p>We create online identities, websites and mobile apps
@@ -90,7 +79,7 @@
         <div class="page-main-info">
           <h3>Featured Work</h3>
           <div class="work-area">
-            <div class="work-row">
+            <div class="work-row mobile-reduce">
               <div class="col-img-main">
                 <img class="gallery-image" src="images/layz-main-image.jpg"/>
                 <div class="caption">
