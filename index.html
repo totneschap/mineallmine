@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:image" content="http://www.greysaga.com/img/share_img/work.jpg" />
-        <meta property="og:description" content="Portfolio of Shane Whittaker" />
-        <meta name="description" content="Portfolio of Shane Whittaker" />
+        <meta property="og:description" content="Portfolio of Grey Ooi, a hybrid Web Designer from Malaysia" />
+        <meta name="description" content="Portfolio of Grey Ooi, a hybrid Web Designer from Malaysia" />
         <link href="css/main.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
@@ -15,15 +15,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <script src="js/functions.js" type="text/javascript"></script>
-        <script>
-          $(function(){
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
-          });
-        </script>
     </head>
     <body id="home-sweet-home">
-      <div id="header"></div>
+
+        <div class="main-title-bar">
+          <div class="mobile_menu">
+            <span class="lnr lnr-menu"></span>
+          </div>
+          <div class="main-title">
+            <a href="index.html" class="title flip">Shane Whittaker</a>
+          </div>
+        </div>
 
         <div class="menu-section">
           <div class="menu-toggle flip">
@@ -33,20 +35,10 @@
           </div>
           <nav>
         		<ul role="navigation" class="hidden">
-        			<li class="huge"><a class="active" href="#">Home</a></li>
-        			<li class="huge"><a href="web-design.html">Work</a></li>
-        			<li class="huge"><a href="#">resume</a></li>
-        			<li class="huge"><a href="#">contact</a></li>
-        		</ul>
-            <ul role="navigation" class="hidden">
-              <li class="small"><a href="#">shanewhittaker83@hotmail.co.uk</a></li>
-        			<li class="small"><a href="#">07800651100</a></li>
-        			<li class="small"><a href="#">contact</a></li>
-        		</ul>
-            <ul role="navigation" class="hidden">
-        			<li class="small"><a href="#">Twitter</a></li>
-        			<li class="small"><a href="#">dribbble</a></li>
-        			<li class="small"><a href="#">facebook</a></li>
+        			<li class="flip"><a class="active" href="#">Home</a></li>
+        			<li class="flip"><a href="web-design.html">Work</a></li>
+        			<li class="flip"><a href="#">resume</a></li>
+        			<li class="flip"><a href="#">contact</a></li>
         		</ul>
         	</nav>
         </div>
@@ -54,6 +46,20 @@
 
 
         <div class="hero-main">
+          <div class="social-panel custom">
+            <div class="social-wrap">
+              <ul class="social">
+                <li><a href="" class="facebook-social flip">Facebook</a></li>
+                <li><a href="" class="twitter-social flip">Twitter</a></li>
+                <li><a href="" class="dribbble-social flip">Dribbble</a></li>
+                <li><a href="" class="behance-social flip">Behance</a></li>
+              </ul>
+            </div>
+
+            <!--div class="switch-page-wrap">
+              <span class="play_site switch_page dark">PLAYGROUND</span>
+            </div-->
+          </div>
           <div class="home-section-title">
             <h1>Hi, I'm Shane Whittaker<br> a freelance web designer.</h1>
             <p>We create online identities, websites and mobile apps
@@ -67,23 +73,17 @@
 
         <div class="page-main-info">
           <h2>About Me</h2>
-          <p>Hello I'm Shane, a freelance UX and UI web designer based in Exeter with over 4 years experience.
-          My specialty is responsive web design, starting with the design process in Photoshop and seeing it come to life in HTML and CSS.
-          I have experience with CMS and web frameworks like Magento, Joomla and Twitter Bootstrap.</p>
-          <ul class="software">
-            <li><img src="images/html_css.svg" alt=""></li>
-            <li><img src="images/magento_logo.png" alt=""></li>
-          </ul>
+          <p>I'm really tall, i build ecommerce sites using the magento platform</p>
         </div>
 
         <div class="page-main-info">
           <h3>Featured Work</h3>
           <div class="work-area">
-            <div class="work-row mobile-reduce">
+            <div class="work-row">
               <div class="col-img-main">
-                <img class="gallery-image" src="images/layz-main-image.jpg"/>
+                <img class="gallery-image" src="images/hero.jpg"/>
                 <div class="caption">
-                  <h2 class="project-title">Lay-Z-Spa</h2>
+                  <h2 class="project-title">Urban Beach Clothing</h2>
                   <h4>Website, Magento</h4>
                 </div>
                 <a href="urban-beach.html"></a>
@@ -92,36 +92,30 @@
 
             <div class="work-row">
               <div class="col-img-half left">
-                <img class="gallery-image" src="images/urbanB.jpeg"/>
+                <img class="gallery-image" src="images/hero.jpg"/>
                 <div class="caption">
-                  <h2 class="project-title">Urban Beach</h2>
-                  <h4>Website, magento</h4>
+                  <h2 class="project-title">Parnell Productions</h2>
+                  <h4>Website</h4>
+                  <a href="#"></a>
                 </div>
-                <a href="urban-beach.html"></a>
               </div>
               <div class="col-img-half right">
                 <img class="gallery-image" src="images/hero.jpg"/>
                 <div class="caption">
                   <h2 class="project-title">sfg</h2>
                   <h4>r</h4>
+                  <a href="#"></a>
                 </div>
-                <a href="#"></a>
               </div>
             </div>
 
-            <div class="view-more">
-              <a href="web-design.html"><p>View All Work</p></a>
-            </div>
           </div>
         </div>
 
+
+
         <div class="page-main-info">
-          <h2>Contact</h2>
-          <p>Hello I'm Shane, a freelance UX and UI web designer based in Exeter with over 4 years experience.
-          My specialty is responsive web design, starting the design process in Photoshop and seeing it come to life in HTML and CSS.
-          I  in Magento</p>
+          <p><a href="web-design.html">View All Work</a></p>
         </div>
-
-
     </body>
 </html>

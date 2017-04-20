@@ -63,12 +63,8 @@ p {
 	.page-main-info {
 		width: 80%;
 		display: inline-block;
-		margin: 8rem auto 0 auto;
+		margin: 8rem auto;
 		padding: 0 10%;
-		@media screen and (max-width: 767px) {
-			width: 90%;
-			padding: 0 5%;
-		}
 		h2 {
 			@include h1;
 			text-transform: uppercase;
@@ -101,22 +97,9 @@ p {
 		p {
 			text-align: left;
 		}
-		.software {
-			display: inline-block;
-			padding: 0;
-			li {
-				width: 50%;
-				float: left;
-				list-style: none;
-				img {
-					width: 50%;
-					display: block;
-					margin: 0 auto;
-				}
-			}
-		}
 		.work-area {
 			.work-row {
+				width: 100%;
 				.caption {
 					& > h2.project-title {
 						@include h1;
@@ -136,70 +119,6 @@ p {
 				}
 			}
 		}
-		.view-more {
-			position: relative;
-			a {
-				margin: 0 auto;
-				position: relative;
-				display: inline-block;
-				color: $main_colour;
-				left: 50%;
-				margin-left: -51px;
-				text-decoration: none;
-				p {
-					text-decoration: none;
-					&:after {
-						content: " ";
-						position: absolute;
-						height: 2px;
-						background: $accent_colour;
-						width: 100%;
-						bottom: 0;
-						right: 0;
-					}
-				}
-			}
-		}
-	}
-	.social-panel {
-		height: 100%;
-		width: calc(100% / 10);
-		position: fixed;
-		top: 0;
-		right: 0;
-		z-index: 10;
-		opacity: 1;
-		@media screen and (max-width: 767px) {
-			display: none;
-		}
-		.social-wrap {
-			position: absolute;
-			transform: translateX(-50%);
-			left: 50%;
-			top: calc(50% - 15rem);
-			width: 6rem;
-			.social {
-				transform: rotate(90deg) translateX(50%);
-				display: inline-block;
-				position: absolute;
-				width: 32rem;
-				right: -13rem;
-				padding: 0;
-				margin: 0;
-				li {
-					float: left;
-					list-style-type: none;
-					text-transform: lowercase;
-					padding: 0 30px;
-					a {
-						text-decoration: none;
-						@include nav-bar-fonts;
-						font-size: 14px;
-						text-transform: lowercase;
-					}
-				}
-			}
-		}
 	}
 }
 .main-title-bar {
@@ -208,13 +127,8 @@ p {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 11;
+	z-index: 10;
 	opacity: 1;
-	@media screen and (max-width: 767px) {
-		height: 40px;
-		width: 100%;
-		background: $accent_colour;
-	}
 	.main-title {
 		position: absolute;
 		top: calc(50%);
@@ -224,10 +138,6 @@ p {
 		z-index: 3;
 		transform: translateX(-50%);
 		width: 185px;
-		@media screen and (max-width: 767px) {
-			width: 100%;
-			top: calc(50%/2);
-		}
 		a {
 			transform: rotate(-90deg);
 			position: relative;
@@ -235,10 +145,7 @@ p {
 			@include nav-bar-fonts;
 			text-transform: uppercase;
 			cursor: pointer;
-			@media screen and (max-width: 767px) {
-				transform: rotate(0deg);
-				padding-top: 2px;
-			}
+			color: $main_colour;
 		}
 	}
 }
@@ -257,20 +164,59 @@ p {
 		right: -2.5rem;
 	}
 }
-.flip {
-  color: #fff;
+.social-panel {
+	height: 100%;
+	width: calc(100% / 10);
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	opacity: 1;
+	.social-wrap {
+		position: absolute;
+		transform: translateX(-50%);
+		left: 50%;
+		top: calc(50% - 15rem);
+		width: 6rem;
+		.social {
+			transform: rotate(90deg) translateX(50%);
+			display: inline-block;
+			position: absolute;
+			width: 32rem;
+			right: -13rem;
+			padding: 0;
+			margin: 0;
+			li {
+				float: left;
+				list-style-type: none;
+				text-transform: lowercase;
+				padding: 0 30px;
+				a {
+					text-decoration: none;
+					@include nav-bar-fonts;
+					font-size: 14px;
+					text-transform: lowercase;
+					color: $main_colour;
+				}
+			}
+		}
+	}
 }
-.flip.scrolling {
-  color: $main_colour;
-  transition: 0.5s;
-}
-.scrolling {
-  color: #fff;
-}
+// .flip {
+//   color: $main_colour;
+// }
+// .flip.scrolling {
+//   color: $main_colour;
+//   transition: 0.5s;
+// }
+// .scrolling {
+//   color: $main_colour;
+// }
 .hero-main {
 	position: relative;
 	display: block;
-	width: 100%;
+	width: 80%;
+	left: 10%;
 	height: 100vh;
 	align-items: center;
 	webkit-justify-content: center;
@@ -289,10 +235,6 @@ p {
 			text-align: center;
 			bottom: 8%;
 			text-transform: uppercase;
-			@media screen and (max-width: 767px) {
-				margin: 0;
-				bottom: 18%
-			}
 		}
 		p {
 			@include h2;
@@ -315,20 +257,12 @@ p {
 		margin: 0 auto;
 		width: 250px;
 		text-align: center;
-		@media screen and (max-width: 767px) {
-			bottom: 15%;
-		}
 	}
 	.image-container {
 		display: block;
-		width: 80%;
+		width: 100%;
 		height: 80%;
 		margin: 0 auto;
-		@media screen and (max-width: 767px) {
-			width: 90%;
-			margin-top: 15%;
-			height: 70%;
-		}
 		.main-image {
 			display: block;
 			position: relative;
@@ -341,6 +275,7 @@ p {
 			background-image: url("..//images/web-head.jpg");
 			background-position: center center;
 			background-size: cover;
+			background-repeat: no-repeat;
 		}
 	}
 }
@@ -352,9 +287,6 @@ p {
 		display: table;
 		content: '';
 	}
-	@media screen and (max-width: 767px) {
-		width: 90%;
-	}
 	p {
 		text-align: center;
 	}
@@ -365,13 +297,9 @@ p {
 	width: 100%;
 	margin: 0 auto;
 	.work-row {
-		width: 100%;
+		width: 80%;
 		display: block;
 		margin: 0 auto 50px auto;
-		@media screen and (max-width: 767px) {
-			margin: 0;
-			padding-bottom: 10px;
-		}
 		&:before {
 			display: table;
 			content: '';
@@ -418,29 +346,18 @@ p {
 		}
 		.col-img-half {
 			@include col-img-half;
-			width: 48%;
-			@media screen and (max-width: 767px) {
-				width: 100%;
-				margin: 0;
-				padding-bottom: 10px;
-			}
+			width: 47%;
 			.gallery-image {
 				width: 100%;
 			}
 		}
-	}
-	.mobile-reduce {
-		@media screen and (max-width: 767px) {
-			margin-bottom: 10px;
+		.left {
+			margin-right: 3%;
+		}
+		.right {
+			margin-left: 3%;
 		}
 	}
-}
-
-.left {
-	margin-right: 2%;
-}
-.right {
-	margin-left: 2%;
 }
 
 
@@ -509,6 +426,11 @@ p {
   opacity: 0.9;
 }
 
+
+
+
+
+
 .menu-toggle {
   width: 40px;
   height: 35px;
@@ -517,9 +439,6 @@ p {
   right: 3.5%;
   cursor: pointer;
 	z-index: 15;
-	@media screen and (max-width: 767px) {
-		top: 0;
-	}
   &.on {
     .one {
       transform: (rotate(45deg) translate(7px, 7px));
@@ -534,6 +453,7 @@ p {
     }
   }
 }
+
 .one,
 .two,
 .three{
@@ -542,11 +462,12 @@ p {
   margin: 9px auto;
   backface-visibility: hidden;
   transition: 0.3s;
-	background: #fff;
+	background: $main_colour;
 }
+
 nav {
 	position: absolute;
-	top: 10%;
+	top: 25%;
 	width: 100%;
 	ul {
 	  margin: 0;
@@ -554,59 +475,25 @@ nav {
 	  list-style: none;
 	  margin: 4em auto;
 	  text-align: right;
-		@media screen and (max-width: 767px) {
-			margin: 0 0 20px 0;
-		}
 	  &.hidden {
 	    display: none;
 	  }
-		.huge {
-			a {
-				@include h1;
-		    transition: 0.5s;
-		    text-decoration: none;
-		    color: white;
-		    font-size: 3em;
-		    line-height: 1.5;
-		    width: 100%;
-		    display: block;
-		    &:hover {
-		      color: $accent_colour;
-		    }
-				@media screen and (max-width: 767px) {
-					font-size: 2.25em;
-				}
-		  }
-		}
-		.small {
-			a {
-				@include h1;
-		    transition: 0.5s;
-		    text-decoration: none;
-		    color: white;
-		    font-size: 1em;
-		    line-height: 1.5;
-		    width: 100%;
-		    display: block;
-		    &:hover {
-		      color: $accent_colour;
-		    }
-		  }
-		}
-	}
-	.hidden {
-		@media screen and (max-width: 767px) {
-			margin: 10px 0;
-		}
-		li {
-			@media screen and (max-width: 767px) {
-				font-weight: 300;
-			}
-		}
+	    a {
+	    transition: 0.5s;
+	    text-decoration: none;
+	    color: white;
+	    font-size: 3em;
+	    line-height: 1.5;
+	    width: 100%;
+	    display: block;
+	      &:hover {
+	        color: $accent_colour;
+	      }
+	    }
 	}
 }
 .active {
-	color: $accent_colour!important;
+	color: $accent_colour;
 }
 .menu-section {
   &.on {
@@ -622,62 +509,4 @@ nav {
 	z-index: 15;
 	overflow: hidden;
   }
-}
-#not-home-sweet-home {
-	.social-panel {
-		height: 100%;
-		width: calc(100% / 10);
-		position: fixed;
-		top: 0;
-		right: 0;
-		z-index: 10;
-		opacity: 1;
-		@media screen and (max-width: 767px) {
-			display: none;
-		}
-		.social-wrap {
-			position: absolute;
-			transform: translateX(-50%);
-			left: 50%;
-			top: calc(50% - 15rem);
-			width: 6rem;
-			.social {
-				transform: rotate(90deg) translateX(50%);
-				display: inline-block;
-				position: absolute;
-				width: 32rem;
-				right: -13rem;
-				padding: 0;
-				margin: 0;
-				li {
-					float: left;
-					list-style-type: none;
-					text-transform: lowercase;
-					padding: 0 30px;
-					a {
-						text-decoration: none;
-						@include nav-bar-fonts;
-						font-size: 14px;
-						text-transform: lowercase;
-						color: $main_colour;
-					}
-				}
-			}
-		}
-	}
-	h3 {
-		@include h1;
-		text-transform: uppercase;
-		color: $main_colour;
-		margin: 0 0 2rem 0;
-		text-align: center;
-		&:before {
-			content: '';
-			background: $accent_colour;
-			height: 5px;
-			width: 30px;
-			display: block;
-			margin: 0 auto 40px auto;
-		}
-	}
 }
