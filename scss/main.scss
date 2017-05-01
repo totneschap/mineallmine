@@ -17,6 +17,9 @@
 
 @import "projects/urbanbeach";
 
+$break-mobile: 767px;
+$break-tablet: 1024px;
+
 body {
 	margin: 0;
 }
@@ -42,6 +45,9 @@ p {
 			width: 80%;
 			left: 10%;
 			top: calc(50% - 85px);
+			@media screen and (max-width: $break-mobile) {
+		    z-index: 2;
+		  }
 			h1 {
 				@include h1;
 				text-transform: uppercase;
@@ -74,9 +80,9 @@ p {
 				content: '';
 				background: $accent_colour;
 				height: 5px;
-				width: 30px;
+				width: 50px;
 				display: block;
-				margin-bottom: 40px;
+				margin-bottom: 20px;
 			}
 		}
 		h3 {
@@ -89,9 +95,9 @@ p {
 				content: '';
 				background: $accent_colour;
 				height: 5px;
-				width: 30px;
+				width: 50px;
 				display: block;
-				margin: 0 auto 40px auto;
+				margin: 0 auto 20px auto;
 			}
 		}
 		p {
@@ -129,6 +135,10 @@ p {
 	left: 0;
 	z-index: 10;
 	opacity: 1;
+	@media screen and (max-width: $break-mobile) {
+    width: 100%;
+		height: auto;
+  }
 	.main-title {
 		position: absolute;
 		top: calc(50%);
@@ -138,6 +148,14 @@ p {
 		z-index: 3;
 		transform: translateX(-50%);
 		width: 185px;
+		@media screen and (max-width: $break-mobile) {
+	    width: 100%;
+			height: 50px;
+			top: 0;
+			left: 0;
+			transform: translateX(0%);
+			background: #fff;
+	  }
 		a {
 			transform: rotate(-90deg);
 			position: relative;
@@ -146,6 +164,11 @@ p {
 			text-transform: uppercase;
 			cursor: pointer;
 			color: $main_colour;
+			@media screen and (max-width: $break-mobile) {
+		    transform: rotate(0deg);
+				width: 100%;
+				padding: 17px 0;
+		  }
 		}
 	}
 }
@@ -172,6 +195,9 @@ p {
 	right: 0;
 	z-index: 10;
 	opacity: 1;
+	@media screen and (max-width: $break-mobile) {
+    display: none;
+  }
 	.social-wrap {
 		position: absolute;
 		transform: translateX(-50%);
@@ -197,6 +223,10 @@ p {
 					font-size: 14px;
 					text-transform: lowercase;
 					color: $main_colour;
+					&:hover {
+						color: $accent_colour;
+						transition: 0.5s;
+					}
 				}
 			}
 		}
@@ -226,6 +256,10 @@ p {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	clear: left;
+	@media screen and (max-width: $break-mobile) {
+		width: 100%;
+		left: 0;
+	}
 	.section-title {
 		h1 {
 			@include h1;
@@ -235,6 +269,9 @@ p {
 			text-align: center;
 			bottom: 8%;
 			text-transform: uppercase;
+			@media screen and (max-width: $break-mobile) {
+				margin-bottom: 0;
+			}
 		}
 		p {
 			@include h2;
@@ -431,6 +468,13 @@ p {
   right: 3.5%;
   cursor: pointer;
 	z-index: 15;
+	@media screen and (max-width: $break-mobile) {
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 45px;
+		padding-top: 5px;
+	}
   &.on {
     .one {
       transform: (rotate(45deg) translate(7px, 7px));
@@ -442,6 +486,9 @@ p {
     .three {
       transform: (rotate(-45deg) translate(8px, -10px));
 			background: $accent_colour;
+			@media screen and (max-width: $break-mobile) {
+				transform: (rotate(-45deg) translate(7px, -7px));
+			}
     }
   }
 }
@@ -455,6 +502,10 @@ p {
   backface-visibility: hidden;
   transition: 0.3s;
 	background: $main_colour;
+	@media screen and (max-width: $break-mobile) {
+		width: 60%;
+		margin: 8px auto;
+	}
 }
 
 nav {
