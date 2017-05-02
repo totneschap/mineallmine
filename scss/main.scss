@@ -47,6 +47,7 @@ p {
 			top: calc(50% - 85px);
 			@media screen and (max-width: $break-mobile) {
 		    z-index: 2;
+				top: 15%;
 		  }
 			h1 {
 				@include h1;
@@ -56,9 +57,9 @@ p {
 					content: '';
 					background: #E66A75;
 					height: 5px;
-					width: 30px;
+					width: 50px;
 					display: block;
-					margin-bottom: 40px;
+					margin-bottom: 20px;
 				}
 			}
 			p {
@@ -71,6 +72,9 @@ p {
 		display: inline-block;
 		margin: 8rem auto;
 		padding: 0 10%;
+		@media screen and (max-width: $break-mobile) {
+			margin: 4rem auto;
+		}
 		h2 {
 			@include h1;
 			text-transform: uppercase;
@@ -337,6 +341,9 @@ p {
 		width: 80%;
 		display: block;
 		margin: 0 auto 50px auto;
+		@media screen and (max-width: $break-mobile) {
+			margin-bottom: 25px;
+		}
 		&:before {
 			display: table;
 			content: '';
@@ -384,15 +391,25 @@ p {
 		.col-img-half {
 			@include col-img-half;
 			width: 47%;
+			@media screen and (max-width: $break-mobile) {
+		    width: 100%;
+				margin-bottom: 25px;
+		  }
 			.gallery-image {
 				width: 100%;
 			}
 		}
 		.left {
 			margin-right: 3%;
+			@media screen and (max-width: $break-mobile) {
+		    margin-right: 0;
+		  }
 		}
 		.right {
 			margin-left: 3%;
+			@media screen and (max-width: $break-mobile) {
+		    margin-left: 0;
+		  }
 		}
 	}
 }
@@ -512,15 +529,17 @@ nav {
 	position: absolute;
 	top: 25%;
 	width: 100%;
+	@media screen and (max-width: $break-mobile) {
+		top: 0;
+		height: 100vh;
+	}
 	ul {
 	  margin: 0;
 	  padding: 0 25px;
 	  list-style: none;
 	  margin: 4em auto;
 	  text-align: right;
-	  &.hidden {
-	    display: none;
-	  }
+
 	    a {
 	    transition: 0.5s;
 	    text-decoration: none;
@@ -567,6 +586,9 @@ nav {
   display:inline-block;
 	left: 50%;
 	margin-left: -65px;
+	@media screen and (max-width: $break-mobile) {
+		padding-top: 0;
+	}
 	&:before {
 		content: '';
 	  position: absolute;
@@ -583,7 +605,16 @@ nav {
 	  -ms-transform: scale(0, 1);
 	  transform: scale(0, 1);
 	  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
-	  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+	  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+		@media screen and (max-width: $break-mobile) {
+			background: $accent_colour;
+			width: 100%;
+			height: 3px;
+			display: block;
+			-webkit-transform: none;
+		  -ms-transform: none;
+		  transform: none;
+		}
 	}
 	&:hover:before {
 		-webkit-transform-origin: left top;
